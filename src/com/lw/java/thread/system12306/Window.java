@@ -1,4 +1,4 @@
-package com.lw.java.system12306;
+package com.lw.java.thread.system12306;
 
 public class Window extends Thread {
 
