@@ -1,6 +1,7 @@
 package com.lw.java.thread.system12306;
 
 public class TestMain {
+
     public static void main(String[] args) {
 
         Window w1 = new Window("北京北站");
@@ -10,5 +11,7 @@ public class TestMain {
         w1.start();
         w2.start();
         w3.start();
+
     }
+
 }
