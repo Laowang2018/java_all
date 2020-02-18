@@ -8,7 +8,7 @@ public class ThreadOne extends Thread {
         Thread two = new ThreadTwo();
         two.start();
         try {
-            two.join();
+            two.join(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
