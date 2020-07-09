@@ -5,7 +5,8 @@ import java.util.concurrent.ThreadFactory;
 
 public class MainTest {
     public static void main(String[] args) {
-//        new Thread(new Printer("good!")).start();
+
+        new Thread(new Printer("good!")).start();
 //        new Thread(new Printer("bad!")).start();
 
         ThreadFactory factory = Executors.defaultThreadFactory();
