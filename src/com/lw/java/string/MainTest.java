@@ -1,22 +1,25 @@
 package com.lw.java.string;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class MainTest {
     public static void main(String[] args) {
+        Runtime runtime = Runtime.getRuntime();
+        long before = runtime.freeMemory();
         ArrayList<String> list = new ArrayList<>();
-        list.add("sdf");
-        list.add("sdf");
-        list.add("sdf");
-        list.add("sdf");
-        System.out.println(list);
-        Set<String> set = new HashSet<String>();
-        set.add("1234");
-        set.add("222");
-        set.add("333");
-        int[] array = new int[]{1,2,3};
-        System.out.println(array);
+        for(int i=0; i<500000; i++) {
+            list.add(UUID.randomUUID().toString() + UUID.randomUUID().toString());
+        }
+        System.out.println(list.size());
+        long after = runtime.freeMemory();
+        System.out.println((before - after)/1024);
+
+        Random random = new Random();
+        Date date = new Date();
+        String s = date.getTime() + "" + date.getTime();
+        String substring = s.substring(5);
+        System.out.println(substring);
+        System.out.println(s);
+
     }
 }
