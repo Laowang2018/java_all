@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.util.Enumeration;
 import java.util.Properties;
 
-@MyAnnotation(test="asdfasdf", value=1)
+@MyAnnotation(test="asdfasdf", value=1, mock={"java", "nio"})
 public class MainTest {
     public static void main(String[] args) throws Exception{
         Properties props = new Properties();
